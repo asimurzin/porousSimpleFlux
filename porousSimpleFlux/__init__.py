@@ -25,12 +25,18 @@
 
 
 #--------------------------------------------------------------------------------------
-from Foam import FOAM_REF_VERSION
+from Foam import FOAM_REF_VERSION, FOAM_VERSION
 if FOAM_REF_VERSION( ">=", "010701" ):
     from porousSimpleFlux.r1_7_1 import *
     pass
     
 
+#--------------------------------------------------------------------------------------
+if FOAM_VERSION( ">=", "020000" ):
+    from porousSimpleFlux.r2_0_0 import *
+    pass
+    
+    
 #--------------------------------------------------------------------------------------
 def entry_point():
     try:
